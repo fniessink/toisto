@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "janitor": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "janitor",
+                "label": "janitor"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "janitor",
+                "label": "vahtimestari"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "janitor",
+                "label": "de conciërge"
+            }
+        ]
+    }
+}

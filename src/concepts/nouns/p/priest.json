@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "priest": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "priest",
+                "label": "priest"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "priest",
+                "label": "pappi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "priest",
+                "label": "de priester"
+            }
+        ]
+    }
+}

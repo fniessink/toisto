@@ -1,0 +1,64 @@
+{
+    "concepts": {
+        "what time": {},
+        "what time is it": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "what time",
+                "label": "What time?",
+                "roots": [
+                    "What?",
+                    "time"
+                ]
+            },
+            {
+                "concept": "what time is it",
+                "label": "What time is it?",
+                "roots": "time"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "what time",
+                "label": "Mihin aikaan?",
+                "roots": [
+                    "mihin",
+                    "aika"
+                ]
+            },
+            {
+                "concept": "what time is it",
+                "label": "Paljonko kello on?",
+                "roots": [
+                    "paljon",
+                    "kello"
+                ]
+            },
+            {
+                "concept": "what time is it",
+                "label": "Mitä kello on?",
+                "roots": [
+                    "Mitä?",
+                    "kello"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "what time",
+                "label": "Hoe laat?",
+                "roots": [
+                    "Hoe?",
+                    "laat"
+                ]
+            },
+            {
+                "concept": "what time is it",
+                "label": "Hoe laat is het?",
+                "roots": "laat"
+            }
+        ]
+    }
+}

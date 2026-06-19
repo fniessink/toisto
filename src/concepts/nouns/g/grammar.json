@@ -1,0 +1,26 @@
+{
+    "concepts": {
+        "grammar": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "grammar",
+                "label": "grammar"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "grammar",
+                "label": "kielioppi",
+                "roots": "kieli"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "grammar",
+                "label": "de grammatica"
+            }
+        ]
+    }
+}

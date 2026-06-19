@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "shoe": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "shoe",
+                "label": {
+                    "singular": "shoe",
+                    "plural": "shoes"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "shoe",
+                "label": {
+                    "singular": "kenkä",
+                    "plural": "kengät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "shoe",
+                "label": {
+                    "singular": "de schoen",
+                    "plural": "de schoenen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "desert": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "desert",
+                    "plural": "deserts"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "aavikko",
+                    "plural": "aavikot"
+                }
+            },
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "autiomaa",
+                    "plural": "autiomaat"
+                },
+                "roots": "maa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "de woestijn",
+                    "plural": "de woestijnen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "disease": {
+            "involves": "patient"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "disease",
+                "label": {
+                    "singular": "disease",
+                    "plural": "diseases"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "disease",
+                "label": {
+                    "singular": "sairaus",
+                    "plural": "sairaudet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "disease",
+                "label": {
+                    "singular": "de ziekte",
+                    "plural": [
+                        "de ziektes",
+                        "de ziekten"
+                    ]
+                }
+            }
+        ]
+    }
+}

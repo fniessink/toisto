@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "parking": {
+            "involves": "car"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "parking",
+                "label": "parking"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "parking",
+                "label": "pysäköinti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "parking",
+                "label": "de parkeergelegenheid"
+            }
+        ]
+    }
+}

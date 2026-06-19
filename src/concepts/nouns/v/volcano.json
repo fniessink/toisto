@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "volcano": {
+            "hypernym": "mountain"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "volcano",
+                "label": {
+                    "singular": "volcano",
+                    "plural": [
+                        "volcanoes",
+                        "volcanos"
+                    ]
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "volcano",
+                "label": {
+                    "singular": "tulivuori",
+                    "plural": "tulivuoret"
+                },
+                "roots": [
+                    "tuli",
+                    "vuori"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "volcano",
+                "label": {
+                    "singular": "de vulkaan",
+                    "plural": "de vulkanen"
+                }
+            }
+        ]
+    }
+}

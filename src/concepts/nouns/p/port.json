@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "port": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "port",
+                "label": {
+                    "singular": "port",
+                    "plural": "ports"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "port",
+                "label": {
+                    "singular": "satama",
+                    "plural": "satamat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "port",
+                "label": {
+                    "singular": "de haven",
+                    "plural": "de havens"
+                }
+            }
+        ]
+    }
+}

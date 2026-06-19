@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "architect": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "architect",
+                "label": "architect"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "architect",
+                "label": "arkkitehti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "architect",
+                "label": "de architect"
+            }
+        ]
+    }
+}

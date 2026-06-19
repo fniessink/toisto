@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "airport": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "airport",
+                "label": "airport",
+                "roots": [
+                    "air",
+                    "port"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "airport",
+                "label": "lentoasema",
+                "roots": [
+                    "lento",
+                    "asema"
+                ]
+            },
+            {
+                "concept": "airport",
+                "label": "lentokenttä",
+                "roots": "lento"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "airport",
+                "label": "het vliegveld",
+                "roots": "het veld"
+            }
+        ]
+    }
+}

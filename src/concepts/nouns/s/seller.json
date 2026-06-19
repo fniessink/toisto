@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "seller": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "seller",
+                "label": "seller"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "seller",
+                "label": "myyjä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "seller",
+                "label": "de verkoper"
+            }
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "server": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "server",
+                "label": "server"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "server",
+                "label": "tarjoilija"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "server",
+                "label": {
+                    "feminine": "de serveerster",
+                    "masculine": "de ober"
+                }
+            }
+        ]
+    }
+}

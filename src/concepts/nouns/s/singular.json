@@ -1,0 +1,26 @@
+{
+    "concepts": {
+        "singular": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "singular",
+                "label": "singular"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "singular",
+                "label": "yksikkö",
+                "roots": "yksi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "singular",
+                "label": "het enkelvoud"
+            }
+        ]
+    }
+}

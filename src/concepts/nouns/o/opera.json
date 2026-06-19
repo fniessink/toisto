@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "opera": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "opera",
+                "label": {
+                    "singular": "opera",
+                    "plural": "operas"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "opera",
+                "label": {
+                    "singular": "ooppera",
+                    "plural": "oopperat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "opera",
+                "label": {
+                    "singular": "de opera",
+                    "plural": "de opera's"
+                }
+            }
+        ]
+    }
+}

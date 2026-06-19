@@ -1,0 +1,60 @@
+{
+    "concepts": {
+        "south": {
+            "example": "it is warm in the south",
+            "hypernym": "compass point"
+        },
+        "it is warm in the south": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "south",
+                "label": [
+                    "south",
+                    "the South"
+                ]
+            },
+            {
+                "concept": "it is warm in the south",
+                "label": "It is warm in the south.",
+                "roots": [
+                    "warm",
+                    "south"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "south",
+                "label": "etelä"
+            },
+            {
+                "concept": "it is warm in the south",
+                "label": "Etelässä on lämmin.",
+                "cloze": "(Etelä) on lämmin.",
+                "roots": [
+                    "etelä",
+                    "lämmin"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "south",
+                "label": "het zuiden"
+            },
+            {
+                "concept": "it is warm in the south",
+                "label": [
+                    "Het is warm in het zuiden.",
+                    "In het zuiden is het warm."
+                ],
+                "roots": [
+                    "het zuiden",
+                    "warm"
+                ]
+            }
+        ]
+    }
+}

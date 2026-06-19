@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "cent": {
+            "hypernym": "money"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cent",
+                "label": {
+                    "singular": "cent",
+                    "plural": "cents"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cent",
+                "label": {
+                    "singular": "sentti",
+                    "plural": "sentit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cent",
+                "label": {
+                    "singular": "de cent",
+                    "plural": "de centen"
+                }
+            }
+        ]
+    }
+}

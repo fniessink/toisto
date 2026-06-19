@@ -1,0 +1,57 @@
+{
+    "concepts": {
+        "west": {
+            "example": "they live in the west",
+            "hypernym": "compass point"
+        },
+        "they live in the west": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "west",
+                "label": [
+                    "west",
+                    "the West"
+                ]
+            },
+            {
+                "concept": "they live in the west",
+                "label": "They live in the west.",
+                "roots": [
+                    "they live",
+                    "west"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "west",
+                "label": "länsi"
+            },
+            {
+                "concept": "they live in the west",
+                "label": "He asuvat lännessä.",
+                "cloze": "He asuvat (länsi).",
+                "roots": [
+                    "he asuvat",
+                    "länsi"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "west",
+                "label": "het westen"
+            },
+            {
+                "concept": "they live in the west",
+                "label": "Zij wonen in het westen.",
+                "roots": [
+                    "zij wonen",
+                    "het westen"
+                ]
+            }
+        ]
+    }
+}

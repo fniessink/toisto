@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "barber": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "barber",
+                "label": "barber"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "barber",
+                "label": "parturi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "barber",
+                "label": "de barber"
+            }
+        ]
+    }
+}

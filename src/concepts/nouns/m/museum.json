@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "museum": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "museum",
+                "label": {
+                    "singular": "museum",
+                    "plural": "museums"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "museum",
+                "label": {
+                    "singular": "museo",
+                    "plural": "museot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "museum",
+                "label": {
+                    "singular": "het museum",
+                    "plural": "de musea"
+                }
+            }
+        ]
+    }
+}

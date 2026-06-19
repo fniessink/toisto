@@ -1,0 +1,75 @@
+{
+    "concepts": {
+        "travel": {
+            "example": "to continue the journey"
+        },
+        "traveler": {},
+        "traveling": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "travel",
+                    "plural": "travels"
+                }
+            },
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "journey",
+                    "plural": "journeys"
+                }
+            },
+            {
+                "concept": "traveler",
+                "label": "traveler",
+                "roots": "travel"
+            },
+            {
+                "concept": "traveling",
+                "label": "traveling",
+                "roots": "travel"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "matka",
+                    "plural": "matkat"
+                }
+            },
+            {
+                "concept": "traveler",
+                "label": "matkustaja",
+                "roots": "matka"
+            },
+            {
+                "concept": "traveling",
+                "label": "matkustaminen",
+                "roots": "matka"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "de reis",
+                    "plural": "de reizen"
+                }
+            },
+            {
+                "concept": "traveler",
+                "label": "de reiziger",
+                "roots": "de reis"
+            },
+            {
+                "concept": "traveling",
+                "label": "het reizen",
+                "roots": "de reis"
+            }
+        ]
+    }
+}

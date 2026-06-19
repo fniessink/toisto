@@ -1,0 +1,29 @@
+{
+    "concepts": {
+        "delivery van": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "delivery van",
+                "label": "delivery van"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "delivery van",
+                "label": "pakettiauto",
+                "roots": "auto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "delivery van",
+                "label": "de bestelwagen",
+                "roots": "de wagen"
+            }
+        ]
+    }
+}

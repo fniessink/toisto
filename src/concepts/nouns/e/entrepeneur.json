@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "entrepeneur": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "entrepeneur",
+                "label": "entrepeneur"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "entrepeneur",
+                "label": "yrittäjä",
+                "roots": "yrittää"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "entrepeneur",
+                "label": "de ondernemer"
+            }
+        ]
+    }
+}

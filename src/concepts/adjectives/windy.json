@@ -1,0 +1,55 @@
+{
+    "concepts": {
+        "windy": {
+            "example": "it is windy",
+            "roots": "wind"
+        },
+        "it is windy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "windy",
+                "label": "windy",
+                "roots": "wind"
+            },
+            {
+                "concept": "it is windy",
+                "label": "It is windy.",
+                "roots": "windy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "windy",
+                "label": "tuulinen",
+                "roots": "tuuli"
+            },
+            {
+                "concept": "it is windy",
+                "label": "On tuulista.",
+                "roots": "tuulinen"
+            },
+            {
+                "concept": "it is windy",
+                "label": "Tuulee."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "windy",
+                "label": "winderig",
+                "roots": "de wind"
+            },
+            {
+                "concept": "it is windy",
+                "label": "Het is winderig.",
+                "roots": "winderig"
+            },
+            {
+                "concept": "it is windy",
+                "label": "Het waait."
+            }
+        ]
+    }
+}

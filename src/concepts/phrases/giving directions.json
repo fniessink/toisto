@@ -1,0 +1,26 @@
+{
+    "concepts": {
+        "giving directions": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "giving directions",
+                "label": "giving directions"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "giving directions",
+                "label": "tien neuvominen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "giving directions",
+                "label": "de weg wijzen",
+                "roots": "de weg"
+            }
+        ]
+    }
+}

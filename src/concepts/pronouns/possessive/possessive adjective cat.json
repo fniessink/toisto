@@ -1,0 +1,115 @@
+{
+    "concepts": {
+        "possessive adjective cat": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "possessive adjective cat",
+                "label": {
+                    "singular": {
+                        "singular pronoun": {
+                            "first person": "my cat",
+                            "second person": "your cat",
+                            "third person": {
+                                "feminine": "her cat",
+                                "masculine": "his cat"
+                            }
+                        },
+                        "plural pronoun": {
+                            "first person": "our cat",
+                            "second person": "your cat",
+                            "third person": "their cat"
+                        }
+                    },
+                    "plural": {
+                        "singular pronoun": {
+                            "first person": "my cats",
+                            "second person": "your cats",
+                            "third person": {
+                                "feminine": "her cats",
+                                "masculine": "his cats"
+                            }
+                        },
+                        "plural pronoun": {
+                            "first person": "our cats",
+                            "second person": "your cats",
+                            "third person": "their cats"
+                        }
+                    }
+                },
+                "roots": "cat"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "possessive adjective cat",
+                "label": {
+                    "singular": {
+                        "singular pronoun": {
+                            "first person": "minun kissani",
+                            "second person": "sinun kissasi",
+                            "third person": "hänen kissansa"
+                        },
+                        "plural pronoun": {
+                            "first person": "meidän kissamme",
+                            "second person": "teidän kissanne",
+                            "third person": "heidän kissansa"
+                        }
+                    },
+                    "plural": {
+                        "singular pronoun": {
+                            "first person": "minun kissani",
+                            "second person": "sinun kissasi",
+                            "third person": "hänen kissansa"
+                        },
+                        "plural pronoun": {
+                            "first person": "meidän kissamme",
+                            "second person": "teidän kissanne",
+                            "third person": "heidän kissansa"
+                        }
+                    }
+                },
+                "roots": "kissa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "possessive adjective cat",
+                "label": {
+                    "singular": {
+                        "singular pronoun": {
+                            "first person": "mijn kat",
+                            "second person": "jouw kat",
+                            "third person": {
+                                "feminine": "haar kat",
+                                "masculine": "zijn kat"
+                            }
+                        },
+                        "plural pronoun": {
+                            "first person": "onze kat",
+                            "second person": "jullie kat",
+                            "third person": "hun kat"
+                        }
+                    },
+                    "plural": {
+                        "singular pronoun": {
+                            "first person": "mijn katten",
+                            "second person": "jouw katten",
+                            "third person": {
+                                "feminine": "haar katten",
+                                "masculine": "zijn katten"
+                            }
+                        },
+                        "plural pronoun": {
+                            "first person": "onze katten",
+                            "second person": "jullie katten",
+                            "third person": "hun katten"
+                        }
+                    }
+                },
+                "roots": "de kat"
+            }
+        ]
+    }
+}

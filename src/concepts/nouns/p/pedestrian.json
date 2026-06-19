@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "pedestrian": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pedestrian",
+                "label": {
+                    "singular": "pedestrian",
+                    "plural": "pedestrians"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pedestrian",
+                "label": {
+                    "singular": "jalankulkija",
+                    "plural": "jalankulkijat"
+                },
+                "roots": "jalka"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pedestrian",
+                "label": {
+                    "singular": "de voetganger",
+                    "plural": "de voetgangers"
+                },
+                "roots": "de voet"
+            }
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "concepts": {
+        "blood": {
+            "holonym": "body"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "blood",
+                "label": {
+                    "singular": "blood",
+                    "plural": "bloods"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "blood",
+                "label": {
+                    "singular": "veri",
+                    "plural": "veret"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "blood",
+                "label": "het bloed"
+            }
+        ]
+    }
+}

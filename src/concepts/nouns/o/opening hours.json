@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "opening hours": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "opening hours",
+                "label": "opening hours",
+                "roots": "hours"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "opening hours",
+                "label": "aukioloajat",
+                "roots": "ajat"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "opening hours",
+                "label": "de openingstijden",
+                "roots": "de tijd"
+            }
+        ]
+    }
+}

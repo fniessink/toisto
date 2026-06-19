@@ -1,0 +1,47 @@
+{
+    "concepts": {
+        "sleet": {
+            "example": "sleet is falling"
+        },
+        "sleet is falling": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sleet",
+                "label": "sleet"
+            },
+            {
+                "concept": "sleet is falling",
+                "label": "Sleet is falling.",
+                "roots": "sleet"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sleet",
+                "label": "räntä"
+            },
+            {
+                "concept": "sleet is falling",
+                "label": "Sataa räntää.",
+                "roots": "räntä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sleet",
+                "label": "de natte sneeuw",
+                "roots": [
+                    "nat",
+                    "de sneeuw"
+                ]
+            },
+            {
+                "concept": "sleet is falling",
+                "label": "Er valt natte sneeuw.",
+                "roots": "de natte sneeuw"
+            }
+        ]
+    }
+}

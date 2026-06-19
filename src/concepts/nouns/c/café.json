@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "café": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "café",
+                "label": {
+                    "singular": "café",
+                    "plural": "cafés"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "café",
+                "label": {
+                    "singular": "kahvila",
+                    "plural": "kahvilat"
+                },
+                "roots": "kahvi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "café",
+                "label": {
+                    "singular": "het café",
+                    "plural": "de cafés"
+                }
+            }
+        ]
+    }
+}

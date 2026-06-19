@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "ending": {},
+        "personal ending": {
+            "hypernym": "ending"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ending",
+                "label": "ending"
+            },
+            {
+                "concept": "personal ending",
+                "label": "personal ending",
+                "roots": "ending"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ending",
+                "label": "pääte"
+            },
+            {
+                "concept": "personal ending",
+                "label": "persoonataivutus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ending",
+                "label": "de uitgang"
+            },
+            {
+                "concept": "personal ending",
+                "label": "de persoonsuitgang",
+                "roots": "de uitgang"
+            }
+        ]
+    }
+}

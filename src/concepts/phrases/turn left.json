@@ -1,0 +1,41 @@
+{
+    "concepts": {
+        "turn left": {},
+        "turn left at the crossroads": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "turn left",
+                "label": "Turn left."
+            },
+            {
+                "concept": "turn left at the crossroads",
+                "label": "Turn left at the crossroads.",
+                "roots": "crossroads"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "turn left",
+                "label": "Käänny vasemmalle."
+            },
+            {
+                "concept": "turn left at the crossroads",
+                "label": "Käänny risteyksestä vasemmalle.",
+                "roots": "risteys"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "turn left",
+                "label": "Sla links af."
+            },
+            {
+                "concept": "turn left at the crossroads",
+                "label": "Sla links af bij het kruispunt.",
+                "roots": "het kruispunt"
+            }
+        ]
+    }
+}

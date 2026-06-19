@@ -1,0 +1,29 @@
+{
+    "concepts": {
+        "what": {
+            "hypernym": "question word",
+            "involves": "thing"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "what",
+                "label": "What?"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "what",
+                "label": "Mitä?",
+                "note": "'mitä' is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "what",
+                "label": "Wat?"
+            }
+        ]
+    }
+}

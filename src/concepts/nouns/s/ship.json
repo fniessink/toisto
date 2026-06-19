@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "ship": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ship",
+                "label": {
+                    "singular": "ship",
+                    "plural": "ships"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ship",
+                "label": {
+                    "singular": "laiva",
+                    "plural": "laivat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ship",
+                "label": {
+                    "singular": "het schip",
+                    "plural": "de schepen"
+                }
+            }
+        ]
+    }
+}

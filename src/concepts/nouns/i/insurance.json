@@ -1,0 +1,96 @@
+{
+    "concepts": {
+        "insurance": {},
+        "home insurance": {
+            "hypernym": "insurance"
+        },
+        "insurance premium": {},
+        "travel insurance": {
+            "involves": "travel",
+            "hypernym": "insurance"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "insurance",
+                "label": "insurance"
+            },
+            {
+                "concept": "home insurance",
+                "label": "home insurance",
+                "roots": [
+                    "home",
+                    "insurance"
+                ]
+            },
+            {
+                "concept": "insurance premium",
+                "label": "insurance premium",
+                "roots": "insurance"
+            },
+            {
+                "concept": "travel insurance",
+                "label": "travel insurance",
+                "roots": [
+                    "travel",
+                    "insurance"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "insurance",
+                "label": "vakuutus"
+            },
+            {
+                "concept": "home insurance",
+                "label": "kotivakuutus",
+                "roots": [
+                    "koti",
+                    "vakuutus"
+                ]
+            },
+            {
+                "concept": "insurance premium",
+                "label": "vakuutusmaksu",
+                "roots": [
+                    "vakuutus",
+                    "maksu"
+                ]
+            },
+            {
+                "concept": "travel insurance",
+                "label": "matkavakuutus",
+                "roots": [
+                    "matka",
+                    "vakuutus"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "insurance",
+                "label": "de verzekering"
+            },
+            {
+                "concept": "home insurance",
+                "label": "de woonverzekering",
+                "roots": "de verzekering"
+            },
+            {
+                "concept": "insurance premium",
+                "label": "de verzekeringspremie",
+                "roots": "de verzekering"
+            },
+            {
+                "concept": "travel insurance",
+                "label": "de reisverzekering",
+                "roots": [
+                    "de reis",
+                    "de verzekering"
+                ]
+            }
+        ]
+    }
+}

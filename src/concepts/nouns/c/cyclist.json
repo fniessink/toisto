@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "cyclist": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cyclist",
+                "label": {
+                    "singular": "cyclist",
+                    "plural": "cyclists"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cyclist",
+                "label": {
+                    "singular": "pyöräilijä",
+                    "plural": "pyöräilijät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cyclist",
+                "label": {
+                    "singular": "de fietser",
+                    "plural": "de fietsers"
+                }
+            }
+        ]
+    }
+}

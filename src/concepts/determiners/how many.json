@@ -1,0 +1,55 @@
+{
+    "concepts": {
+        "how many": {
+            "hypernym": "question word",
+            "example": "how many degrees is it outside"
+        },
+        "how many degrees is it outside": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "how many",
+                "label": "How many?",
+                "roots": "How?"
+            },
+            {
+                "concept": "how many degrees is it outside",
+                "label": "How many degrees is it outside?",
+                "roots": [
+                    "How many?",
+                    "degree",
+                    "outside"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "how many",
+                "label": "Kuinka monta?"
+            },
+            {
+                "concept": "how many degrees is it outside",
+                "label": "Kuinka monta astetta ulkona on?",
+                "roots": [
+                    "Kuinka monta?",
+                    "aste"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "how many",
+                "label": "Hoeveel?"
+            },
+            {
+                "concept": "how many degrees is it outside",
+                "label": "Hoeveel graden is het buiten?",
+                "roots": [
+                    "Hoeveel?",
+                    "de graad"
+                ]
+            }
+        ]
+    }
+}

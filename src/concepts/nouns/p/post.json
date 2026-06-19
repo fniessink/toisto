@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "post": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "post",
+                "label": "mail"
+            },
+            {
+                "concept": "post",
+                "label": "post"
+            }
+        ],
+        "fi": [
+            {
+                "concept": [
+                    "post",
+                    "post office"
+                ],
+                "label": "posti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "post",
+                "label": "de post"
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "managing director": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "managing director",
+                "label": "managing director"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "managing director",
+                "label": "toimitusjohtaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "managing director",
+                "label": "de bedrijfsleider",
+                "roots": "het bedrijf"
+            },
+            {
+                "concept": "managing director",
+                "label": "de directeur"
+            }
+        ]
+    }
+}

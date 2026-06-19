@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "researcher": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "researcher",
+                "label": "researcher"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "researcher",
+                "label": "tutkija"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "researcher",
+                "label": "de onderzoeker"
+            }
+        ]
+    }
+}

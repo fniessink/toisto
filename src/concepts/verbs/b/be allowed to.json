@@ -1,0 +1,76 @@
+{
+    "concepts": {
+        "to be allowed to": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to be allowed to",
+                "label": {
+                    "singular": {
+                        "first person": "I am allowed to paint the house.",
+                        "second person": "You are allowed to paint the house.",
+                        "third person": {
+                            "feminine": "She is allowed to paint the house.",
+                            "masculine": "He is allowed to paint the house."
+                        }
+                    },
+                    "plural": {
+                        "first person": "We are allowed to paint the house.",
+                        "second person": "You are allowed to paint the house.",
+                        "third person": "They are allowed to paint the house."
+                    }
+                },
+                "roots": [
+                    "to paint",
+                    "house"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to be allowed to",
+                "label": {
+                    "singular": {
+                        "first person": "Minä saan maalata talon.",
+                        "second person": "Sinä saat maalata talon.",
+                        "third person": "Hän saa maalata talon."
+                    },
+                    "plural": {
+                        "first person": "Me saamme maalata talon.",
+                        "second person": "Te saatte maalata talon.",
+                        "third person": "He saavat maalata talon."
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to be allowed to",
+                "label": {
+                    "singular": {
+                        "first person": "Ik mag het huis schilderen.",
+                        "second person": "Jij mag het huis schilderen.",
+                        "third person": {
+                            "feminine": "Zij mag het huis schilderen.",
+                            "masculine": "Hij mag het huis schilderen."
+                        }
+                    },
+                    "plural": {
+                        "first person": "Wij mogen het huis schilderen.",
+                        "second person": "Jullie mogen het huis schilderen.",
+                        "third person": "Zij mogen het huis schilderen."
+                    }
+                },
+                "roots": [
+                    "schilderen",
+                    "het huis"
+                ]
+            }
+        ]
+    }
+}

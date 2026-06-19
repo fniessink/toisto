@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "how long does it take": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "how long does it take",
+                "label": "How long does it take?"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "how long does it take",
+                "label": "Kauanko se kestää?",
+                "roots": [
+                    "kauan",
+                    "kestää"
+                ]
+            },
+            {
+                "concept": "how long does it take",
+                "label": "Kuinka kauan se kestää?",
+                "roots": [
+                    "Kuinka?",
+                    "kauan",
+                    "kestää"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "how long does it take",
+                "label": "Hoe lang duurt het?",
+                "roots": [
+                    "Hoe?",
+                    "lang",
+                    "duren"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "restaurant": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "restaurant",
+                "label": {
+                    "singular": "restaurant",
+                    "plural": "restaurants"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "restaurant",
+                "label": {
+                    "singular": "ravintola",
+                    "plural": "ravintolat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "restaurant",
+                "label": {
+                    "singular": "het restaurant",
+                    "plural": "de restaurants"
+                }
+            }
+        ]
+    }
+}

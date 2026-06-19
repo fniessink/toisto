@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "patient": {
+            "involves": "hospital"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "patient",
+                "label": {
+                    "singular": "patient",
+                    "plural": "patients"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "patient",
+                "label": {
+                    "singular": "potilas",
+                    "plural": "potilaat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "patient",
+                "label": {
+                    "singular": "de patiënt",
+                    "plural": "de patiënten"
+                }
+            }
+        ]
+    }
+}

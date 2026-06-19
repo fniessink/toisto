@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "snow": {
+            "example": "it is snowing"
+        },
+        "it is snowing": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "snow",
+                "label": "snow"
+            },
+            {
+                "concept": "it is snowing",
+                "label": "It is snowing.",
+                "roots": "snow"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "snow",
+                "label": "lumi"
+            },
+            {
+                "concept": "it is snowing",
+                "label": "Sataa lunta."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "snow",
+                "label": "de sneeuw"
+            },
+            {
+                "concept": "it is snowing",
+                "label": "Het sneeuwt.",
+                "roots": "de sneeuw"
+            }
+        ]
+    }
+}

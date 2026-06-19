@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "coat": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "coat",
+                "label": {
+                    "singular": "coat",
+                    "plural": "coats"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "coat",
+                "label": {
+                    "singular": "takki",
+                    "plural": "takit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "coat",
+                "label": {
+                    "singular": "de jas",
+                    "plural": "de jassen"
+                }
+            }
+        ]
+    }
+}

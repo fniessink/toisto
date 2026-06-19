@@ -1,0 +1,87 @@
+{
+    "concepts": {
+        "toilet": {
+            "hypernym": "room"
+        },
+        "toilet bowl": {
+            "holonym": "toilet"
+        },
+        "toilet seat": {
+            "holonym": "toilet"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "toilet",
+                "label": "restroom",
+                "roots": "room"
+            },
+            {
+                "concept": "toilet",
+                "label": "toilet"
+            },
+            {
+                "concept": "toilet bowl",
+                "label": "toilet bowl",
+                "roots": "toilet"
+            },
+            {
+                "concept": "toilet seat",
+                "label": "toilet seat",
+                "roots": "toilet"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "toilet",
+                "label": "wc"
+            },
+            {
+                "concept": "toilet",
+                "label": "vessa"
+            },
+            {
+                "concept": "toilet bowl",
+                "label": "vessanpönttö",
+                "roots": "vessa"
+            },
+            {
+                "concept": "toilet seat",
+                "label": "vessaistuin",
+                "roots": "vessa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "toilet",
+                "label": "de wc"
+            },
+            {
+                "concept": "toilet",
+                "label": "het toilet"
+            },
+            {
+                "concept": "toilet bowl",
+                "label": "de toiletpot",
+                "roots": "het toilet"
+            },
+            {
+                "concept": "toilet seat",
+                "label": "de toiletbril",
+                "roots": [
+                    "het toilet",
+                    "de bril"
+                ]
+            },
+            {
+                "concept": "toilet seat",
+                "label": "de wc-bril",
+                "roots": [
+                    "de wc",
+                    "de bril"
+                ]
+            }
+        ]
+    }
+}

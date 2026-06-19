@@ -1,0 +1,60 @@
+{
+    "concepts": {
+        "teacher": {
+            "hypernym": "profession"
+        },
+        "kindergarten teacher": {
+            "hypernym": "teacher"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "teacher",
+                "label": {
+                    "singular": "teacher",
+                    "plural": "teachers"
+                }
+            },
+            {
+                "concept": "kindergarten teacher",
+                "label": "kindergarten teacher",
+                "roots": "teacher"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "teacher",
+                "label": {
+                    "singular": "opettaja",
+                    "plural": "opettajat"
+                }
+            },
+            {
+                "concept": "kindergarten teacher",
+                "label": "lastentarhanopettaja",
+                "roots": "opettaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "teacher",
+                "label": {
+                    "singular": "de docent",
+                    "plural": "de docenten"
+                }
+            },
+            {
+                "concept": "teacher",
+                "label": {
+                    "singular": "de leraar",
+                    "plural": "de leraren"
+                }
+            },
+            {
+                "concept": "kindergarten teacher",
+                "label": "de kleuterjuf"
+            }
+        ]
+    }
+}

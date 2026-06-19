@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "pronoun": {},
+        "personal pronoun": {
+            "hypernym": "pronoun"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pronoun",
+                "label": "pronoun"
+            },
+            {
+                "concept": "personal pronoun",
+                "label": "personal pronoun",
+                "roots": "pronoun"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pronoun",
+                "label": "pronomini"
+            },
+            {
+                "concept": "personal pronoun",
+                "label": "persoonapronomini",
+                "roots": "pronomini"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pronoun",
+                "label": "het voornaamwoord"
+            },
+            {
+                "concept": "personal pronoun",
+                "label": "het persoonlijk voornaamwoord",
+                "roots": "het voornaamwoord"
+            }
+        ]
+    }
+}

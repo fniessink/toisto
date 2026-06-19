@@ -1,0 +1,33 @@
+{
+    "concepts": {
+        "kitchenhand": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "kitchenhand",
+                "label": "kitchenhand",
+                "roots": [
+                    "kitchen",
+                    "hand"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "kitchenhand",
+                "label": "keittiöapulainen",
+                "roots": "keittiö"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "kitchenhand",
+                "label": "de keukenhulp",
+                "roots": "de keuken"
+            }
+        ]
+    }
+}

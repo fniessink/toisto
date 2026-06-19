@@ -1,0 +1,46 @@
+{
+    "concepts": {
+        "sunny": {
+            "example": "it is sunny"
+        },
+        "it is sunny": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sunny",
+                "label": "sunny",
+                "roots": "sun"
+            },
+            {
+                "concept": "it is sunny",
+                "label": "It is sunny.",
+                "roots": "sunny"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sunny",
+                "label": "aurinkoinen",
+                "roots": "aurinko"
+            },
+            {
+                "concept": "it is sunny",
+                "label": "On aurinkoista.",
+                "roots": "aurinkoinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sunny",
+                "label": "zonnig",
+                "roots": "de zon"
+            },
+            {
+                "concept": "it is sunny",
+                "label": "Het is zonnig.",
+                "roots": "zonnig"
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "money": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "money",
+                "label": "money"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "money",
+                "label": "raha"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "money",
+                "label": "het geld"
+            }
+        ]
+    }
+}

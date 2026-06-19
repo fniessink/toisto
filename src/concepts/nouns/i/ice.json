@@ -1,0 +1,40 @@
+{
+    "concepts": {
+        "ice": {
+            "example": "it is freezing"
+        },
+        "it is freezing": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ice",
+                "label": "ice"
+            },
+            {
+                "concept": "it is freezing",
+                "label": "It is freezing."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ice",
+                "label": "jää"
+            },
+            {
+                "concept": "it is freezing",
+                "label": "On pakkasta."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ice",
+                "label": "het ijs"
+            },
+            {
+                "concept": "it is freezing",
+                "label": "Het vriest."
+            }
+        ]
+    }
+}

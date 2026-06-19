@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "assistant": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "assistant",
+                "label": "assistant"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "assistant",
+                "label": "assistentti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "assistant",
+                "label": "de assistent"
+            }
+        ]
+    }
+}

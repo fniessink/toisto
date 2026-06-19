@@ -1,0 +1,48 @@
+{
+    "concepts": {
+        "garage": {},
+        "parking garage": {
+            "hypernym": [
+                "parking",
+                "building"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "garage",
+                "label": "garage"
+            },
+            {
+                "concept": "parking garage",
+                "label": "parking garage",
+                "roots": [
+                    "parking",
+                    "garage"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "garage",
+                "label": "korjaamo"
+            },
+            {
+                "concept": "parking garage",
+                "label": "parkkihalli"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "garage",
+                "label": "de garage"
+            },
+            {
+                "concept": "parking garage",
+                "label": "de parkeergarage",
+                "roots": "de garage"
+            }
+        ]
+    }
+}

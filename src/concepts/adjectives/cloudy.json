@@ -1,0 +1,67 @@
+{
+    "concepts": {
+        "cloudy": {
+            "example": [
+                "it is cloudy",
+                "it is partly cloudy"
+            ]
+        },
+        "it is cloudy": {},
+        "it is partly cloudy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cloudy",
+                "label": "cloudy",
+                "roots": "cloud"
+            },
+            {
+                "concept": "it is cloudy",
+                "label": "It is cloudy.",
+                "roots": "cloudy"
+            },
+            {
+                "concept": "it is partly cloudy",
+                "label": "It is partly cloudy.",
+                "roots": "cloudy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cloudy",
+                "label": "pilvinen",
+                "roots": "pilvi"
+            },
+            {
+                "concept": "it is cloudy",
+                "label": "On pilvistä.",
+                "roots": "pilvinen"
+            },
+            {
+                "concept": "it is partly cloudy",
+                "label": "On puolipilvistä.",
+                "roots": [
+                    "puoli",
+                    "pilvinen"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cloudy",
+                "label": "bewolkt",
+                "roots": "de wolk"
+            },
+            {
+                "concept": "it is cloudy",
+                "label": "Het is bewolkt.",
+                "roots": "bewolkt"
+            },
+            {
+                "concept": "it is partly cloudy",
+                "label": "Het is half bewolkt."
+            }
+        ]
+    }
+}

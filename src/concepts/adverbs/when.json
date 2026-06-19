@@ -1,0 +1,58 @@
+{
+    "concepts": {
+        "when": {
+            "hypernym": "question word",
+            "example": "when will you arrive at the airport"
+        },
+        "when will you arrive at the airport": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "when",
+                "label": "When?"
+            },
+            {
+                "concept": "when will you arrive at the airport",
+                "label": "When will you arrive at the airport?",
+                "roots": [
+                    "When?",
+                    "to arrive",
+                    "airport"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "when",
+                "label": "Milloin?"
+            },
+            {
+                "concept": "when will you arrive at the airport",
+                "label": "Milloin saavut lentokentälle?",
+                "roots": [
+                    "Milloin?",
+                    "sinä saavut",
+                    "lentokenttä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "when",
+                "label": "Wanneer?"
+            },
+            {
+                "concept": "when will you arrive at the airport",
+                "label": [
+                    "Wanneer kom je aan op het vliegveld?",
+                    "Wanneer kom je op het vliegveld aan?"
+                ],
+                "roots": [
+                    "Wanneer?",
+                    "het vliegveld"
+                ]
+            }
+        ]
+    }
+}

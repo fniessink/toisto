@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "playground": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "playground",
+                "label": "playground",
+                "roots": [
+                    "to play",
+                    "ground"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "playground",
+                "label": "leikkipuisto",
+                "roots": "puisto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "playground",
+                "label": "de speeltuin",
+                "roots": [
+                    "spelen",
+                    "de tuin"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "concepts": {
+        "to have to": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to have to",
+                "label": {
+                    "singular": {
+                        "first person": "I have to paint the house.",
+                        "second person": "You have to paint the house.",
+                        "third person": {
+                            "feminine": "She has to paint the house.",
+                            "masculine": "He has to paint the house."
+                        }
+                    },
+                    "plural": {
+                        "first person": "We have to paint the house.",
+                        "second person": "You have to paint the house.",
+                        "third person": "They have to paint the house."
+                    }
+                },
+                "roots": [
+                    "to paint",
+                    "house"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to have to",
+                "label": {
+                    "singular": {
+                        "first person": "Minun täytyy maalata talo.",
+                        "second person": "Sinun täytyy maalata talo.",
+                        "third person": "Hänen täytyy maalata talo."
+                    },
+                    "plural": {
+                        "first person": "Meidän täytyy maalata talo.",
+                        "second person": "Teidän täytyy maalata talo.",
+                        "third person": "Heidän täytyy maalata talo."
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to have to",
+                "label": {
+                    "singular": {
+                        "first person": "Ik moet het huis schilderen.",
+                        "second person": "Jij moet het huis schilderen.",
+                        "third person": {
+                            "feminine": "Zij moet het huis schilderen.",
+                            "masculine": "Hij moet het huis schilderen."
+                        }
+                    },
+                    "plural": {
+                        "first person": "Wij moeten het huis schilderen.",
+                        "second person": "Jullie moeten het huis schilderen.",
+                        "third person": "Zij moeten het huis schilderen."
+                    }
+                },
+                "roots": [
+                    "schilderen",
+                    "het huis"
+                ]
+            }
+        ]
+    }
+}

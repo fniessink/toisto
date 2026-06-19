@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "vocabulary": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "vocabulary",
+                "label": "vocabulary"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "vocabulary",
+                "label": "sanasto",
+                "roots": "sana"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "vocabulary",
+                "label": "de woordenschat",
+                "roots": "het woord"
+            }
+        ]
+    }
+}

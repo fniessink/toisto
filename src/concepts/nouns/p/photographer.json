@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "photographer": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "photographer",
+                "label": "photographer"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "photographer",
+                "label": "valokuvaaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "photographer",
+                "label": "de fotograaf"
+            }
+        ]
+    }
+}

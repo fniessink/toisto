@@ -1,0 +1,45 @@
+{
+    "concepts": {
+        "broker": {
+            "hypernym": "profession"
+        },
+        "real estate broker": {
+            "hypernym": "broker"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "broker",
+                "label": "broker"
+            },
+            {
+                "concept": "real estate broker",
+                "label": "real estate broker",
+                "roots": "broker"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "broker",
+                "label": "välittäjä"
+            },
+            {
+                "concept": "real estate broker",
+                "label": "kiinteistonvälittäjä",
+                "roots": "välittäjä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "broker",
+                "label": "de makelaar"
+            },
+            {
+                "concept": "real estate broker",
+                "label": "de vastgoedmakelaar",
+                "roots": "de makelaar"
+            }
+        ]
+    }
+}

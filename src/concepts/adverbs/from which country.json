@@ -1,0 +1,52 @@
+{
+    "concepts": {
+        "from which country": {
+            "hypernym": "question word",
+            "example": "from which country are you"
+        },
+        "from which country are you": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "from which country",
+                "label": "from which country",
+                "meaning-only": true
+            },
+            {
+                "concept": "from which country are you",
+                "label": "From which country are you?",
+                "roots": "country"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "from which country",
+                "label": "minkämaalainen"
+            },
+            {
+                "concept": "from which country are you",
+                "label": "Minkämaalainen sinä olet?",
+                "roots": [
+                    "minkämaalainen",
+                    "sinä olet"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "from which country",
+                "label": "uit welk land",
+                "meaning-only": true
+            },
+            {
+                "concept": "from which country are you",
+                "label": "Uit welk land kom jij?",
+                "roots": [
+                    "het land",
+                    "jij komt"
+                ]
+            }
+        ]
+    }
+}

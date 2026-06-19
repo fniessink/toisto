@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "shirt": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "shirt",
+                "label": {
+                    "singular": "shirt",
+                    "plural": "shirts"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "shirt",
+                "label": {
+                    "singular": "paita",
+                    "plural": "paidat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "shirt",
+                "label": {
+                    "singular": "het hemd",
+                    "plural": "de hemden"
+                }
+            }
+        ]
+    }
+}

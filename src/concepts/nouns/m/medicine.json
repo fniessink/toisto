@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "medicine": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "medicine",
+                "label": {
+                    "singular": "medicine",
+                    "plural": "medicines"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "medicine",
+                "label": {
+                    "singular": "lääke",
+                    "plural": "lääkkeet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "medicine",
+                "label": {
+                    "singular": "het medicijn",
+                    "plural": "de medicijnen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "concepts": {
+        "match": {
+            "involves": "sport"
+        },
+        "ice hockey match": {
+            "hypernym": "match",
+            "involves": "ice hockey"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "match",
+                "label": {
+                    "singular": "match",
+                    "plural": "matches"
+                }
+            },
+            {
+                "concept": "ice hockey match",
+                "label": "ice hockey match",
+                "roots": [
+                    "ice hockey",
+                    "match"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "match",
+                "label": {
+                    "singular": "ottelu",
+                    "plural": "ottelut"
+                }
+            },
+            {
+                "concept": "ice hockey match",
+                "label": "jääkiekko-ottelu",
+                "roots": [
+                    "jääkiekko",
+                    "ottelu"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "match",
+                "label": {
+                    "singular": "de wedstrijd",
+                    "plural": "de wedstrijden"
+                }
+            },
+            {
+                "concept": "ice hockey match",
+                "label": "de ijshockeywedstrijd",
+                "roots": [
+                    "het ijshockey",
+                    "de wedstrijd"
+                ]
+            }
+        ]
+    }
+}

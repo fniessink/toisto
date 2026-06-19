@@ -1,0 +1,54 @@
+{
+    "concepts": {
+        "rainforest": {
+            "hypernym": "forest"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rainforest",
+                "label": {
+                    "singular": [
+                        "rainforest",
+                        "rain forest"
+                    ],
+                    "plural": [
+                        "rainforests",
+                        "rain forests"
+                    ]
+                },
+                "roots": [
+                    "rain",
+                    "forest"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rainforest",
+                "label": {
+                    "singular": "sademetsä",
+                    "plural": "sademetsät"
+                },
+                "roots": [
+                    "sade",
+                    "metsä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "rainforest",
+                "label": {
+                    "singular": "het regenwoud",
+                    "plural": "de regenwouden"
+                },
+                "roots": [
+                    "de regen",
+                    "het woud"
+                ]
+            }
+        ]
+    }
+}

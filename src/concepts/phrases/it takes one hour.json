@@ -1,0 +1,41 @@
+{
+    "concepts": {
+        "it takes one hour": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "it takes one hour",
+                "label": "It takes one hour.",
+                "roots": [
+                    "one",
+                    "hour"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "it takes one hour",
+                "label": "Se kestää tunnin.",
+                "roots": [
+                    "kestää",
+                    "tunti"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "it takes one hour",
+                "label": [
+                    "Het duurt één uur.",
+                    "Het duurt een uur."
+                ],
+                "roots": [
+                    "duren",
+                    "één",
+                    "het uur"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "concepts": {
+        "mall": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mall",
+                "label": {
+                    "singular": "mall",
+                    "plural": "malls"
+                }
+            },
+            {
+                "concept": "mall",
+                "label": {
+                    "singular": "shopping center",
+                    "plural": "shopping centers"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mall",
+                "label": {
+                    "singular": "kauppakeskus",
+                    "plural": "kauppakeskukset"
+                },
+                "roots": "kauppa"
+            },
+            {
+                "concept": "mall",
+                "label": {
+                    "singular": "ostoskeskus",
+                    "plural": "ostoskeskukset"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mall",
+                "label": {
+                    "singular": "het winkelcentrum",
+                    "plural": "de winkelcentra"
+                },
+                "roots": [
+                    "de winkel",
+                    "het centrum"
+                ]
+            }
+        ]
+    }
+}

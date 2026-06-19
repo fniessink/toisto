@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "politician": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "politician",
+                "label": "politician"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "politician",
+                "label": "poliitikko"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "politician",
+                "label": "de politicus"
+            }
+        ]
+    }
+}

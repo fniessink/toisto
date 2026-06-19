@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "stairs": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "stairs",
+                "label": "stairs"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "stairs",
+                "label": "portaat"
+            },
+            {
+                "concept": "stairs",
+                "label": "rappuset"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "stairs",
+                "label": {
+                    "singular": "de trap",
+                    "plural": "de trappen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "concepts": {
+        "north": {
+            "example": [
+                "it is cold in the north",
+                "she is from the north"
+            ],
+            "hypernym": "compass point"
+        },
+        "it is cold in the north": {},
+        "she is from the north": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "north",
+                "label": [
+                    "north",
+                    "the North"
+                ]
+            },
+            {
+                "concept": "it is cold in the north",
+                "label": "It is cold in the north.",
+                "roots": [
+                    "cold",
+                    "north"
+                ]
+            },
+            {
+                "concept": "she is from the north",
+                "label": "She is from the north.",
+                "roots": [
+                    "north"
+                ]
+            },
+            {
+                "concept": "she is from the north",
+                "label": "She comes from the north.",
+                "roots": [
+                    "north"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "north",
+                "label": "pohjoinen"
+            },
+            {
+                "concept": "it is cold in the north",
+                "label": "Pohjoisessa on kylmä.",
+                "cloze": "(Pohjoinen) on kylmä.",
+                "roots": [
+                    "pohjoinen",
+                    "kylmä"
+                ]
+            },
+            {
+                "concept": "she is from the north",
+                "label": "Hän tulee pohjoisesta.",
+                "cloze": "Hän tulee (pohjoinen).",
+                "roots": [
+                    "hän tulee",
+                    "pohjoinen"
+                ],
+                "tip": "feminine"
+            },
+            {
+                "concept": "she is from the north",
+                "label": "Hän on kotoisin pohjoisesta.",
+                "cloze": "Hän on kotoisin (pohjoinen).",
+                "roots": [
+                    "hän on",
+                    "kotoisin",
+                    "pohjoinen"
+                ],
+                "tip": "feminine"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "north",
+                "label": "het noorden"
+            },
+            {
+                "concept": "it is cold in the north",
+                "label": [
+                    "Het is koud in het noorden.",
+                    "In het noorden is het koud."
+                ],
+                "roots": [
+                    "het noorden",
+                    "koud"
+                ]
+            },
+            {
+                "concept": "she is from the north",
+                "label": "Zij komt uit het noorden.",
+                "roots": [
+                    "het noorden",
+                    "koud"
+                ]
+            }
+        ]
+    }
+}

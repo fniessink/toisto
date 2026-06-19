@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "receipt": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "receipt",
+                "label": "receipt"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "receipt",
+                "label": "kuitti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "receipt",
+                "label": [
+                    "de bon",
+                    "het bonnetje"
+                ]
+            },
+            {
+                "concept": "receipt",
+                "label": "de kwitantie"
+            }
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "concepts": {
+        "care": {},
+        "health care": {
+            "hypernym": "care"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "care",
+                "label": "care"
+            },
+            {
+                "concept": "health care",
+                "label": "health care",
+                "roots": [
+                    "health",
+                    "care"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "care",
+                "label": "hoito"
+            },
+            {
+                "concept": "health care",
+                "label": "terveydenhoito",
+                "roots": [
+                    "terveys",
+                    "hoito"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "care",
+                "label": "de zorg"
+            },
+            {
+                "concept": "health care",
+                "label": "de gezondheidszorg",
+                "roots": [
+                    "de gezondheid",
+                    "de zorg"
+                ]
+            }
+        ]
+    }
+}

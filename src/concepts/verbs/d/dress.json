@@ -1,0 +1,91 @@
+{
+    "concepts": {
+        "to dress": {
+            "involves": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to dress",
+                "label": {
+                    "infinitive": "to dress",
+                    "singular": {
+                        "first person": "I dress",
+                        "second person": "you dress",
+                        "third person": {
+                            "feminine": "she dresses",
+                            "masculine": "he dresses"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we dress",
+                        "second person": "you dress",
+                        "third person": "they dress"
+                    }
+                }
+            },
+            {
+                "concept": "to dress",
+                "label": {
+                    "infinitive": "to get dressed",
+                    "singular": {
+                        "first person": "I get dressed",
+                        "second person": "you get dressed",
+                        "third person": {
+                            "feminine": "she gets dressed",
+                            "masculine": "he gets dressed"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we get dressed",
+                        "second person": "you get dressed",
+                        "third person": "they get dressed"
+                    }
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to dress",
+                "label": {
+                    "infinitive": "pukeutua",
+                    "singular": {
+                        "first person": "minä pukeudun",
+                        "second person": "sinä pukeudut",
+                        "third person": "hän pukeutuu"
+                    },
+                    "plural": {
+                        "first person": "me pukeudumme",
+                        "second person": "te pukeudutte",
+                        "third person": "he pukeutuvat"
+                    }
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to dress",
+                "label": {
+                    "infinitive": "zich aankleden",
+                    "singular": {
+                        "first person": [
+                            "ik kleed mij aan",
+                            "ik kleed me aan"
+                        ],
+                        "second person": "jij kleedt je aan",
+                        "third person": {
+                            "feminine": "zij kleedt zich aan",
+                            "masculine": "hij kleedt zich aan"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij kleden ons aan",
+                        "second person": "jullie kleden je aan",
+                        "third person": "zij kleden zich aan"
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "concepts": {
+        "century": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "century",
+                "label": {
+                    "singular": "century",
+                    "plural": "centuries"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "century",
+                "label": {
+                    "singular": "vuosisata",
+                    "plural": "vuosisadat"
+                },
+                "roots": [
+                    "vuosi",
+                    "sata"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "century",
+                "label": {
+                    "singular": "de eeuw",
+                    "plural": "de eeuwen"
+                }
+            }
+        ]
+    }
+}

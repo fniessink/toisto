@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "noon": {
+            "hypernym": "time of day"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "noon",
+                "label": "noon"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "noon",
+                "label": {
+                    "singular": "keskipäivä",
+                    "plural": "keskipäivät"
+                },
+                "roots": "päivä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "noon",
+                "label": "twaalf uur 's middags",
+                "roots": [
+                    "twaalf",
+                    "het uur",
+                    "de middag"
+                ]
+            }
+        ]
+    }
+}

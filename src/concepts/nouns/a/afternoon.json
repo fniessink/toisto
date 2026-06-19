@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "afternoon": {
+            "hypernym": "time of day"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "afternoon",
+                "label": {
+                    "singular": "afternoon",
+                    "plural": "afternoons"
+                },
+                "roots": "noon"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "afternoon",
+                "label": {
+                    "singular": "iltapäivä",
+                    "plural": "iltapäivät"
+                },
+                "roots": [
+                    "ilta",
+                    "päivä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "afternoon",
+                "label": {
+                    "singular": "de middag",
+                    "plural": "de middagen"
+                },
+                "roots": "de dag"
+            }
+        ]
+    }
+}

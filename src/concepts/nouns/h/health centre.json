@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "health centre": {
+            "hypernym": "building",
+            "involves": "health care"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "health centre",
+                "label": [
+                    "health centre",
+                    "health center"
+                ],
+                "roots": [
+                    "health",
+                    "centre"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "health centre",
+                "label": "terveysasema",
+                "roots": [
+                    "terveys",
+                    "asema"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "health centre",
+                "label": "het gezondheidscentrum",
+                "roots": [
+                    "de gezondheid",
+                    "het centrum"
+                ]
+            }
+        ]
+    }
+}

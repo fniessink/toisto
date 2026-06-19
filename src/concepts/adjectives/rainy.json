@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "rainy": {
+            "example": "it is rainy"
+        },
+        "it is rainy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rainy",
+                "label": "rainy",
+                "roots": "rain"
+            },
+            {
+                "concept": "it is rainy",
+                "label": "It is rainy.",
+                "roots": "rainy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rainy",
+                "label": "sateinen"
+            },
+            {
+                "concept": "it is rainy",
+                "label": "On sateista."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "rainy",
+                "label": "regenachtig",
+                "roots": "de regen"
+            },
+            {
+                "concept": "it is rainy",
+                "label": "Het is regenachtig.",
+                "roots": "regenachtig"
+            }
+        ]
+    }
+}

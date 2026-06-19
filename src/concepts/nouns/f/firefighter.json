@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "firefighter": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "firefighter",
+                "label": "firefighter",
+                "roots": "fire"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "firefighter",
+                "label": "palomies",
+                "roots": "mies"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "firefighter",
+                "label": "de brandweerman",
+                "roots": "de man"
+            }
+        ]
+    }
+}

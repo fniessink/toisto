@@ -63,16 +63,16 @@ vulture: uv-sync
     uv run vulture --exclude .venv {{ code_folders }} .vulture-whitelist.py
 
 # Run the formatters, linters, and checkers. Pass 'fix' to also fix issues.
-quality *fix: (lint fix) type-check bandit vulture
+check *fix: (lint fix) type-check bandit vulture
 
 # Run all checks. Pass 'fix' to also fix issues
-all *fix: (test 'cov') (quality fix)
+all *fix: (test 'cov') (check fix)
 
 _sonarcloud:
     uv run coverage xml # SonarCloud needs a Cobertura compatible XML coverage report
     uv run python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
 
-_ci: (test 'cov') _sonarcloud quality
+_ci: (test 'cov') _sonarcloud check
 
 # Build and publish the distribution packages.
 publish:

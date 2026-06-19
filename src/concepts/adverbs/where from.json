@@ -1,0 +1,54 @@
+{
+    "concepts": {
+        "where from": {
+            "hypernym": "question word",
+            "example": "where are you from"
+        },
+        "where are you from": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "where from",
+                "label": "Where from?"
+            },
+            {
+                "concept": "where are you from",
+                "label": "Where are you from?",
+                "roots": "Where from?"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "where from",
+                "label": "Mistä?"
+            },
+            {
+                "concept": "where are you from",
+                "label": "Mistä sinä olet kotoisin?",
+                "roots": [
+                    "Mistä?",
+                    "sinä olet"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "where from",
+                "label": [
+                    "Waarvandaan?",
+                    "Waar vandaan?"
+                ],
+                "roots": "Waar?"
+            },
+            {
+                "concept": "where are you from",
+                "label": "Waar kom jij vandaan?",
+                "roots": [
+                    "jij komt",
+                    "Waar vandaan?"
+                ]
+            }
+        ]
+    }
+}

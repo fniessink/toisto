@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "cave": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cave",
+                "label": {
+                    "singular": "cave",
+                    "plural": "caves"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cave",
+                "label": {
+                    "singular": "luola",
+                    "plural": "luolat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cave",
+                "label": {
+                    "singular": "de grot",
+                    "plural": "de grotten"
+                }
+            }
+        ]
+    }
+}

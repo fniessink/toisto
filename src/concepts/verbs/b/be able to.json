@@ -1,0 +1,77 @@
+{
+    "concepts": {
+        "to be able to": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to be able to",
+                "label": {
+                    "singular": {
+                        "first person": "I can paint the house.",
+                        "second person": "You can paint the house.",
+                        "third person": {
+                            "feminine": "She can paint the house.",
+                            "masculine": "He can paint the house."
+                        }
+                    },
+                    "plural": {
+                        "first person": "We can paint the house.",
+                        "second person": "You can paint the house.",
+                        "third person": "They can paint the house."
+                    }
+                },
+                "roots": [
+                    "to paint",
+                    "house"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to be able to",
+                "label": {
+                    "singular": {
+                        "first person": "Minä osaan maalata talon.",
+                        "second person": "Sinä osaat maalata talon.",
+                        "third person": "Hän osaa maalata talon."
+                    },
+                    "plural": {
+                        "first person": "Me osaamme maalata talon.",
+                        "second person": "Te osaatte maalata talon.",
+                        "third person": "He osaavat maalata talon."
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to be able to",
+                "label": {
+                    "singular": {
+                        "first person": "Ik kan het huis schilderen.",
+                        "second person": "Jij kan het huis schilderen.",
+                        "third person": {
+                            "feminine": "Zij kan het huis schilderen.",
+                            "masculine": "Hij kan het huis schilderen."
+                        }
+                    },
+                    "plural": {
+                        "first person": "Wij kunnen het huis schilderen.",
+                        "second person": "Jullie kunnen het huis schilderen.",
+                        "third person": "Zij kunnen het huis schilderen."
+                    }
+                },
+                "roots": [
+                    "kunnen",
+                    "schilderen",
+                    "het huis"
+                ]
+            }
+        ]
+    }
+}

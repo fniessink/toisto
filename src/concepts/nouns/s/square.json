@@ -1,0 +1,63 @@
+{
+    "concepts": {
+        "square": {
+            "example": "there is a christmas tree on the square"
+        },
+        "there is a christmas tree on the square": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "square",
+                "label": {
+                    "singular": "square",
+                    "plural": "squares"
+                }
+            },
+            {
+                "concept": "there is a christmas tree on the square",
+                "label": "There is a Christmas tree on the square.",
+                "roots": [
+                    "Christmas tree",
+                    "square"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "square",
+                "label": {
+                    "singular": "aukio",
+                    "plural": "aukiot"
+                }
+            },
+            {
+                "concept": "there is a christmas tree on the square",
+                "label": "Aukiolla on joulukuusi.",
+                "cloze": "(Aukio) on joulukuusi.",
+                "roots": [
+                    "aukio",
+                    "joulukuusi"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "square",
+                "label": {
+                    "singular": "het plein",
+                    "plural": "de pleinen"
+                }
+            },
+            {
+                "concept": "there is a christmas tree on the square",
+                "label": "Er staat een kerstboom op het plein.",
+                "cloze": "Er (hangt/ligt/staat/zit) een kerstboom op het plein.",
+                "roots": [
+                    "de kerstboom",
+                    "het plein"
+                ]
+            }
+        ]
+    }
+}

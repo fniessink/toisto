@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "storm": {
+            "example": "it is storming"
+        },
+        "it is storming": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "storm",
+                "label": "storm"
+            },
+            {
+                "concept": "it is storming",
+                "label": "It is storming.",
+                "roots": "storm"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "storm",
+                "label": "myrsky"
+            },
+            {
+                "concept": "it is storming",
+                "label": "On myrsky.",
+                "roots": "myrsky"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "storm",
+                "label": "de storm"
+            },
+            {
+                "concept": "it is storming",
+                "label": "Het stormt."
+            }
+        ]
+    }
+}

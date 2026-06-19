@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "ache": {
+            "involves": "patient"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ache",
+                "label": {
+                    "singular": "ache",
+                    "plural": "aches"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ache",
+                "label": {
+                    "singular": "särky",
+                    "plural": "säryt"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": [
+                    "ache",
+                    "pain"
+                ],
+                "label": {
+                    "singular": "de pijn",
+                    "plural": "de pijnen"
+                }
+            }
+        ]
+    }
+}

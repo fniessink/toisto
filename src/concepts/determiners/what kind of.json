@@ -1,0 +1,98 @@
+{
+    "concepts": {
+        "what kind of": {
+            "hypernym": "question word",
+            "example": [
+                "what is the weather like",
+                "what kind of cat do you have"
+            ]
+        },
+        "what is the weather like": {},
+        "what kind of cat do you have": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "what kind of",
+                "label": "What kind of?",
+                "roots": "What?"
+            },
+            {
+                "concept": "what is the weather like",
+                "label": "What is the weather like today?",
+                "roots": [
+                    "What?",
+                    "weather",
+                    "today"
+                ]
+            },
+            {
+                "concept": "what kind of cat do you have",
+                "label": "What kind of cat do you have?",
+                "roots": [
+                    "What kind of?",
+                    "cat"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "what kind of",
+                "label": "Millainen?"
+            },
+            {
+                "concept": "what is the weather like",
+                "label": [
+                    "Millainen sää tänään on?",
+                    "Millainen ilma tänään on?"
+                ],
+                "roots": [
+                    "Millainen?",
+                    "sää",
+                    "tänään"
+                ]
+            },
+            {
+                "concept": "what kind of cat do you have",
+                "label": "Millainen kissa sinulla on?",
+                "roots": [
+                    "Millainen?",
+                    "kissa",
+                    "sinulla on"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "what kind of",
+                "label": "Wat voor soort?",
+                "roots": "Wat?"
+            },
+            {
+                "concept": "what kind of",
+                "label": "Wat voor een?",
+                "roots": "Wat?"
+            },
+            {
+                "concept": "what is the weather like",
+                "label": "Wat voor weer is het vandaag?",
+                "roots": [
+                    "Wat voor een?",
+                    "het weer",
+                    "vandaag"
+                ]
+            },
+            {
+                "concept": "what kind of cat do you have",
+                "label": [
+                    "Wat voor soort kat heb jij?",
+                    "Wat voor een kat heb jij?"
+                ],
+                "roots": [
+                    "Wat voor een?",
+                    "de kat"
+                ]
+            }
+        ]
+    }
+}

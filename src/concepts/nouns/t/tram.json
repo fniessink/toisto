@@ -1,0 +1,56 @@
+{
+    "concepts": {
+        "tram": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "tram",
+                    "plural": "trams"
+                }
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "streetcar",
+                    "plural": "streetcars"
+                },
+                "roots": [
+                    "street",
+                    "car"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "raitiovaunu",
+                    "plural": "raitiovaunut"
+                },
+                "roots": "vaunu"
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "ratikka",
+                    "plural": "ratikat"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "de tram",
+                    "plural": "de trams"
+                }
+            }
+        ]
+    }
+}

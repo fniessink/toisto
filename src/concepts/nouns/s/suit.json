@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "suit": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "suit",
+                "label": {
+                    "singular": "suit",
+                    "plural": "suits"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "suit",
+                "label": {
+                    "singular": "puku",
+                    "plural": "puvut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "suit",
+                "label": {
+                    "singular": "het pak",
+                    "plural": "de pakken"
+                }
+            }
+        ]
+    }
+}

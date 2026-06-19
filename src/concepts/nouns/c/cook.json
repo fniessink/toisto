@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "cook": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cook",
+                "label": "cook"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cook",
+                "label": "kokki"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cook",
+                "label": "de kok"
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "park": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "park",
+                "label": {
+                    "singular": "park",
+                    "plural": "parks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "park",
+                "label": {
+                    "singular": "puisto",
+                    "plural": "puistot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "park",
+                "label": {
+                    "singular": "het park",
+                    "plural": "de parken"
+                }
+            }
+        ]
+    }
+}

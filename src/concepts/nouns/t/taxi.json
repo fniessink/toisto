@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "taxi": {
+            "hypernym": "car"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "taxi",
+                    "plural": "taxis"
+                }
+            },
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "cab",
+                    "plural": "cabs"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "taksi",
+                    "plural": "taksit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "de taxi",
+                    "plural": "de taxi's"
+                }
+            }
+        ]
+    }
+}

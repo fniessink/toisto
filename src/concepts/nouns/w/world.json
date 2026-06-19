@@ -1,0 +1,29 @@
+{
+    "concepts": {
+        "world": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "world",
+                "label": "world"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "world",
+                "label": "maailma",
+                "roots": [
+                    "maa",
+                    "ilma"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "world",
+                "label": "de wereld"
+            }
+        ]
+    }
+}

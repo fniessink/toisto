@@ -1,0 +1,57 @@
+{
+    "concepts": {
+        "program": {},
+        "travel program": {
+            "hypernym": "program",
+            "involves": "travel"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "program",
+                "label": "program"
+            },
+            {
+                "concept": "program",
+                "label": "programme"
+            },
+            {
+                "concept": "travel program",
+                "label": "travel program",
+                "roots": [
+                    "travel",
+                    "program"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "program",
+                "label": "ohjelma"
+            },
+            {
+                "concept": "travel program",
+                "label": "matkaohjelma",
+                "roots": [
+                    "matka",
+                    "ohjelma"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "program",
+                "label": "het programma"
+            },
+            {
+                "concept": "travel program",
+                "label": "het reisprogramma",
+                "roots": [
+                    "de reis",
+                    "het programma"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "concepts": {
+        "office": {
+            "example": "I am in the office"
+        },
+        "I am in the office": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "office",
+                "label": {
+                    "singular": "office",
+                    "plural": "offices"
+                }
+            },
+            {
+                "concept": "I am in the office",
+                "label": "I am in the office.",
+                "roots": [
+                    "I am",
+                    "office"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "office",
+                "label": {
+                    "singular": "toimisto",
+                    "plural": "toimistot"
+                }
+            },
+            {
+                "concept": "I am in the office",
+                "label": "Minä olen toimistolla.",
+                "cloze": "Minä olen (toimisto).",
+                "roots": [
+                    "minä olen",
+                    "toimisto"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "office",
+                "label": {
+                    "singular": "het kantoor",
+                    "plural": "de kantoren"
+                }
+            },
+            {
+                "concept": "I am in the office",
+                "label": "Ik ben op kantoor.",
+                "roots": [
+                    "ik ben",
+                    "het kantoor"
+                ]
+            }
+        ]
+    }
+}

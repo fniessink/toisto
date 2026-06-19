@@ -1,0 +1,61 @@
+{
+    "concepts": {
+        "path": {},
+        "cycle path": {
+            "hypernym": "path"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "path",
+                "label": {
+                    "singular": "path",
+                    "plural": "paths"
+                }
+            },
+            {
+                "concept": "cycle path",
+                "label": "cycle path",
+                "roots": [
+                    "cycling",
+                    "path"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "path",
+                "label": {
+                    "singular": "polku",
+                    "plural": "polut"
+                }
+            },
+            {
+                "concept": "cycle path",
+                "label": "pyörätie",
+                "roots": [
+                    "polkypyörä",
+                    "tie"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "path",
+                "label": {
+                    "singular": "het pad",
+                    "plural": "de paden"
+                }
+            },
+            {
+                "concept": "cycle path",
+                "label": "het fietspad",
+                "roots": [
+                    "de fiets",
+                    "het pad"
+                ]
+            }
+        ]
+    }
+}

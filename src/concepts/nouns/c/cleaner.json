@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "cleaner": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cleaner",
+                "label": "cleaner"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cleaner",
+                "label": "siivooja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cleaner",
+                "label": "de schoonmaker"
+            }
+        ]
+    }
+}

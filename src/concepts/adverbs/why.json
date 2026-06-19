@@ -1,0 +1,123 @@
+{
+    "concepts": {
+        "why": {
+            "hypernym": "question word",
+            "example": [
+                "why are you doing that",
+                "why is that the case",
+                "why are you too late",
+                "why are bananas bent"
+            ]
+        },
+        "why are you doing that": {},
+        "why is that the case": {},
+        "why are you too late": {},
+        "why are bananas bent": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "why",
+                "label": "Why?"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Why are you doing that?",
+                "roots": "Why?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Why is that the case?",
+                "roots": "Why?"
+            },
+            {
+                "concept": "why are you too late",
+                "label": "Why are you too late?",
+                "roots": "Why?"
+            },
+            {
+                "concept": "why are bananas bent",
+                "label": "Why are bananas bent?",
+                "roots": "Why?"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "why",
+                "label": "Miksi?"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Miksi teet tuon?",
+                "roots": "Miksi?"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Miksi teet noin?",
+                "roots": "Miksi?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Miksi se on noin?",
+                "roots": "Miksi?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Miksi se on niin?",
+                "roots": "Miksi?"
+            },
+            {
+                "concept": "why are you too late",
+                "label": "Miksi sinä olet myöhässä?",
+                "roots": [
+                    "Miksi?",
+                    "sinä olet",
+                    "myöhässä"
+                ]
+            },
+            {
+                "concept": "why are bananas bent",
+                "label": "Miksi banaanit ovat käyriä?",
+                "roots": [
+                    "Miksi?",
+                    "banaani"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "why",
+                "label": "Waarom?"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Waarom doe je dat?",
+                "roots": "Waarom?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Waarom is dat zo?",
+                "roots": "Waarom?"
+            },
+            {
+                "concept": "why are you too late",
+                "label": "Waarom ben je te laat?",
+                "roots": [
+                    "Waarom?",
+                    "laat"
+                ]
+            },
+            {
+                "concept": "why are bananas bent",
+                "label": [
+                    "Waarom zijn bananen krom?",
+                    "Waarom zijn de bananen krom?"
+                ],
+                "roots": [
+                    "Waarom?",
+                    "de banaan"
+                ]
+            }
+        ]
+    }
+}

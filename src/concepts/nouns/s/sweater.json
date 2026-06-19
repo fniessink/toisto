@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "sweater": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sweater",
+                "label": {
+                    "singular": "sweater",
+                    "plural": "sweaters"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sweater",
+                "label": {
+                    "singular": "neulepaita",
+                    "plural": "neulepaidat"
+                },
+                "roots": "paita"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sweater",
+                "label": {
+                    "singular": "de trui",
+                    "plural": "de truien"
+                }
+            }
+        ]
+    }
+}

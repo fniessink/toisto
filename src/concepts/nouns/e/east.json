@@ -1,0 +1,67 @@
+{
+    "concepts": {
+        "east": {
+            "example": "the city is in the east",
+            "hypernym": "compass point"
+        },
+        "the city is in the east": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "east",
+                "label": [
+                    "east",
+                    "the East"
+                ]
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "The city is in the east.",
+                "roots": [
+                    "city",
+                    "east"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "east",
+                "label": "itä"
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "Kaupunki on idässä.",
+                "cloze": "Kaupunki on (itä).",
+                "roots": [
+                    "kaupunki",
+                    "itä"
+                ]
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "Kaupunki sijaitsee idässä.",
+                "cloze": "Kaupunki sijaitsee (itä).",
+                "roots": [
+                    "kaupunki",
+                    "itä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "east",
+                "label": "het oosten"
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "De stad ligt in het oosten.",
+                "cloze": "De stad (hangt/ligt/staat/zit) in het oosten.",
+                "roots": [
+                    "de stad",
+                    "het oosten"
+                ]
+            }
+        ]
+    }
+}
