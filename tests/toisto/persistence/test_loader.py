@@ -99,3 +99,42 @@ class LoadConceptsTest(ToistoTestCase):
         )
         concept2 = self.create_concept("concept_id2", labels=[{"label": "Label2", "language": NL}])
         self.assertEqual({concept1, concept2}, self.loader.load_concepts(Path("folder")))
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    @patch("sys.stderr.write")
+    def test_load_concept_with_undefined_relation(self, stderr_write: Mock, path_open: Mock) -> None:
+        """Test that an error message is given when a relation refers to a concept that is not defined."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concepts": {"dog": {"hypernym": "animal"}}}\n'
+        ]
+        self.assertRaises(SystemExit, self.loader.load_concepts, Path("file"))
+        self.assertIn(
+            f"file {Path('file')}: concept 'dog' has hypernym 'animal' that is not a defined concept",
+            stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    @patch("sys.stderr.write")
+    def test_load_label_with_undefined_concept(self, stderr_write: Mock, path_open: Mock) -> None:
+        """Test that an error message is given when a label refers to a concept that is not defined."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concepts": {"dog": {}}, "labels": {"en": [{"concept": "cat", "label": "cat"}]}}\n'
+        ]
+        self.assertRaises(SystemExit, self.loader.load_concepts, Path("file"))
+        self.assertIn(
+            f"file {Path('file')}: label refers to concept 'cat' that is not a defined concept",
+            stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    def test_load_concepts_with_relation_to_concept_in_other_file(self, path_open: Mock) -> None:
+        """Test that a relation may refer to a concept defined in another file."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concepts": {"dog": {"hypernym": "animal"}}}\n',
+            '{"concepts": {"animal": {}}}\n',
+        ]
+        concepts = self.loader.load_concepts(Path("file1"), Path("file2"))
+        self.assertEqual({"animal", "dog"}, {concept.concept_id for concept in concepts})

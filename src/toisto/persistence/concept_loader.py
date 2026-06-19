@@ -1,16 +1,19 @@
 """Concept loader."""
 
 from argparse import ArgumentParser
+from collections.abc import Iterator
 from pathlib import Path
-from typing import TypedDict, cast
+from typing import TypedDict, cast, get_args
 
 from ..metadata import NAME
 from ..model.language import Language
-from ..model.language.concept import Concept, ConceptId
+from ..model.language.concept import Concept, ConceptId, ConceptIdListOrString, NonInvertedConceptRelation
 from ..model.language.concept_factory import ConceptJSON, create_concept
 from ..model.language.label_factory import LabelJSON
 from .identifier_registry import IdentifierRegistry
 from .json_file import load_json
+
+RELATION_KEYS = get_args(NonInvertedConceptRelation)
 
 
 class JSON(TypedDict):
@@ -30,14 +33,22 @@ class ConceptLoader:
     def load_concepts(self, *paths: Path) -> set[Concept]:
         """Load the concept from the concept JSON files."""
         concepts: dict[ConceptId, ConceptJSON] = {}
+        concept_files: dict[ConceptId, Path] = {}
         labels: list[LabelJSON] = []
+        label_references: list[tuple[Path, ConceptId]] = []
         for file_path in self._json_paths(*paths):
             json = self._load_file(file_path)
-            concepts |= json.get("concepts", {})
+            for concept_id, concept_json in json.get("concepts", {}).items():
+                concepts[concept_id] = concept_json
+                concept_files[concept_id] = file_path
             for language, language_labels in json.get("labels", {}).items():
                 for label in language_labels:
                     label["language"] = language
                     labels.append(label)
+                    label_concept = label["concept"]
+                    label_concepts = label_concept if isinstance(label_concept, list) else [label_concept]
+                    label_references.extend((file_path, concept_id) for concept_id in label_concepts)
+        self._check_references(concepts, concept_files, label_references)
         return self._create_concepts(concepts, labels)
 
     def _load_file(self, file_path: Path) -> JSON:
@@ -49,6 +60,36 @@ class ConceptLoader:
         except Exception as reason:  # noqa: BLE001
             self.argument_parser.error(f"{NAME} cannot read file {file_path}: {reason}.\n")
         return json
+
+    def _check_references(
+        self,
+        concepts: dict[ConceptId, ConceptJSON],
+        concept_files: dict[ConceptId, Path],
+        label_references: list[tuple[Path, ConceptId]],
+    ) -> None:
+        """Check that concept relations and label concepts refer to defined concepts."""
+        errors = list(self._relation_errors(concepts, concept_files))
+        errors.extend(
+            f"file {file_path}: label refers to concept '{concept_id}' that is not a defined concept"
+            for file_path, concept_id in label_references
+            if concept_id not in concepts
+        )
+        if errors:
+            self.argument_parser.error(f"{NAME} cannot read concepts:\n" + "\n".join(sorted(set(errors))) + "\n")
+
+    @staticmethod
+    def _relation_errors(concepts: dict[ConceptId, ConceptJSON], concept_files: dict[ConceptId, Path]) -> Iterator[str]:
+        """Yield an error for each concept relation that refers to a concept that is not defined."""
+        for concept_id, concept_json in concepts.items():
+            relations = cast("dict[str, ConceptIdListOrString]", concept_json)
+            for relation in RELATION_KEYS:
+                related = relations.get(relation, [])
+                for related_concept_id in related if isinstance(related, list) else [related]:
+                    if related_concept_id not in concepts:
+                        yield (
+                            f"file {concept_files[concept_id]}: concept '{concept_id}' has "
+                            f"{relation} '{related_concept_id}' that is not a defined concept"
+                        )
 
     def _create_concepts(self, concepts: dict[ConceptId, ConceptJSON], labels: list[LabelJSON]) -> set[Concept]:
         """Create the concepts."""
