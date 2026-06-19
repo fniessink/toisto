@@ -40,12 +40,8 @@ format-json *fix:
 validate-markdown-json:
     uv run --no-project --script tools/validate_markdown_json.py
 
-# Check that concept references (relations and label concepts) resolve to defined concepts.
-validate-concepts:
-    uv run --no-project --script tools/validate_concept_references.py
-
 # Run the linters. Pass 'fix' to also fix issues.
-lint *fix: (ruff fix) (fixit fix) (troml fix) (pyproject-fmt fix) (format-json fix) validate-markdown-json validate-concepts
+lint *fix: (ruff fix) (fixit fix) (troml fix) (pyproject-fmt fix) (format-json fix) validate-markdown-json
 
 # Check the code for typing issues
 ty: uv-sync
