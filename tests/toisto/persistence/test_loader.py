@@ -138,3 +138,29 @@ class LoadConceptsTest(ToistoTestCase):
         ]
         concepts = self.loader.load_concepts(Path("file1"), Path("file2"))
         self.assertEqual({"animal", "dog"}, {concept.concept_id for concept in concepts})
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    @patch("sys.stderr.write")
+    def test_load_label_with_undefined_root(self, stderr_write: Mock, path_open: Mock) -> None:
+        """Test that an error message is given when a label root is not an existing label."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concepts": {"dog": {}}, "labels": {"en": [{"concept": "dog", "label": "dog", "roots": "animal"}]}}\n'
+        ]
+        self.assertRaises(SystemExit, self.loader.load_concepts, Path("file"))
+        self.assertIn(
+            f"file {Path('file')}: root 'animal' of concept 'dog' (en) is not a defined label",
+            stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    def test_load_label_with_root_referring_to_other_label(self, path_open: Mock) -> None:
+        """Test that a label root may refer to a label of another concept."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concepts": {"dog": {}, "watchdog": {}}, "labels": {"en": ['
+            '{"concept": "dog", "label": "dog"}, '
+            '{"concept": "watchdog", "label": "watchdog", "roots": "dog"}]}}\n'
+        ]
+        concepts = self.loader.load_concepts(Path("file"))
+        self.assertEqual({"dog", "watchdog"}, {concept.concept_id for concept in concepts})
