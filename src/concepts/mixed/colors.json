@@ -1,10 +1,12 @@
 {
     "concepts": {
         "black": {
+            "example": "the car is black",
             "antonym": "white",
             "hypernym": "color"
         },
         "white": {
+            "example": "the house is white",
             "antonym": "black",
             "hypernym": "color"
         },
@@ -16,9 +18,11 @@
             "hypernym": "color"
         },
         "green": {
+            "example": "i sit on a green sofa",
             "hypernym": "color"
         },
         "red": {
+            "example": "i read the red book",
             "hypernym": "color"
         },
         "yellow": {

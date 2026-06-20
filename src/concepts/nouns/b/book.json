@@ -1,6 +1,8 @@
 {
     "concepts": {
-        "book": {},
+        "book": {
+            "example": "i read the red book"
+        },
         "audiobook": {
             "hypernym": "book"
         },
