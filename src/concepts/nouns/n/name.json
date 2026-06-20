@@ -1,6 +1,8 @@
 {
     "concepts": {
-        "name": {},
+        "name": {
+            "example": "what is your name"
+        },
         "first name": {
             "hypernym": "name"
         },

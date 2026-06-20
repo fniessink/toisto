@@ -4,6 +4,7 @@
             "holonym": "year"
         },
         "spring": {
+            "example": "dutch springs are wet",
             "hypernym": "season"
         },
         "in spring": {},
@@ -17,12 +18,14 @@
         "last summer": {},
         "during the summer": {},
         "autumn": {
+            "example": "the dutch autumn is wet",
             "hypernym": "season"
         },
         "in autumn": {},
         "next autumn": {},
         "last autumn": {},
         "winter": {
+            "example": "the finnish winter is cold",
             "hypernym": "season"
         },
         "in winter": {},
