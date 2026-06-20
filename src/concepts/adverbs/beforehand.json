@@ -1,17 +1,9 @@
 {
     "concepts": {
-        "before": {},
         "beforehand": {}
     },
     "labels": {
         "en": [
-            {
-                "concept": [
-                    "before",
-                    "prior to"
-                ],
-                "label": "before"
-            },
             {
                 "concept": "beforehand",
                 "label": "beforehand",
@@ -27,19 +19,11 @@
         ],
         "fi": [
             {
-                "concept": "before",
-                "label": "ennen kuin"
-            },
-            {
                 "concept": "beforehand",
                 "label": "etukäteen"
             }
         ],
         "nl": [
-            {
-                "concept": "before",
-                "label": "voordat"
-            },
             {
                 "concept": "beforehand",
                 "label": [

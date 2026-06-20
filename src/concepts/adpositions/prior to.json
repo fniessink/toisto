@@ -1,18 +1,45 @@
 {
     "concepts": {
-        "prior to": {}
+        "prior to": {
+            "example": "monday comes before tuesday"
+        },
+        "monday comes before tuesday": {}
     },
     "labels": {
         "en": [
             {
-                "concept": "prior to",
+                "concept": [
+                    "before",
+                    "prior to"
+                ],
                 "label": "prior to"
+            },
+            {
+                "concept": "monday comes before tuesday",
+                "label": [
+                    "Monday comes prior to Tuesday.",
+                    "Monday comes before Tuesday."
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "prior to",
                 "label": "ennen"
+            },
+            {
+                "concept": "monday comes before tuesday",
+                "label": "Maanantai on ennen tiistaita."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "prior to",
+                "label": "voor"
+            },
+            {
+                "concept": "monday comes before tuesday",
+                "label": "Maandag komt voor dinsdag."
             }
         ]
     }
