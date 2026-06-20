@@ -9,6 +9,7 @@ from ..metadata import NAME
 from ..model.language import Language
 from ..model.language.concept import Concept, ConceptId, ConceptIdListOrString, NonInvertedConceptRelation
 from ..model.language.concept_factory import ConceptJSON, create_concept
+from ..model.language.label import Label
 from ..model.language.label_factory import LabelJSON
 from .identifier_registry import IdentifierRegistry
 from .json_file import load_json
@@ -34,8 +35,7 @@ class ConceptLoader:
         """Load the concept from the concept JSON files."""
         concepts: dict[ConceptId, ConceptJSON] = {}
         concept_files: dict[ConceptId, Path] = {}
-        labels: list[LabelJSON] = []
-        label_references: list[tuple[Path, ConceptId]] = []
+        labeled: list[tuple[Path, LabelJSON]] = []
         for file_path in self._json_paths(*paths):
             json = self._load_file(file_path)
             for concept_id, concept_json in json.get("concepts", {}).items():
@@ -44,12 +44,11 @@ class ConceptLoader:
             for language, language_labels in json.get("labels", {}).items():
                 for label in language_labels:
                     label["language"] = language
-                    labels.append(label)
-                    label_concept = label["concept"]
-                    label_concepts = label_concept if isinstance(label_concept, list) else [label_concept]
-                    label_references.extend((file_path, concept_id) for concept_id in label_concepts)
-        self._check_references(concepts, concept_files, label_references)
-        return self._create_concepts(concepts, labels)
+                    labeled.append((file_path, label))
+        self._check_references(concepts, concept_files, labeled)
+        created_concepts = self._create_concepts(concepts, [label for _, label in labeled])
+        self._check_roots(labeled)
+        return created_concepts
 
     def _load_file(self, file_path: Path) -> JSON:
         """Load JSON file and check that concept identifiers are unique."""
@@ -65,15 +64,34 @@ class ConceptLoader:
         self,
         concepts: dict[ConceptId, ConceptJSON],
         concept_files: dict[ConceptId, Path],
-        label_references: list[tuple[Path, ConceptId]],
+        labeled: list[tuple[Path, LabelJSON]],
     ) -> None:
         """Check that concept relations and label concepts refer to defined concepts."""
         errors = list(self._relation_errors(concepts, concept_files))
         errors.extend(
             f"file {file_path}: label refers to concept '{concept_id}' that is not a defined concept"
-            for file_path, concept_id in label_references
+            for file_path, label in labeled
+            for concept_id in (label["concept"] if isinstance(label["concept"], list) else [label["concept"]])
             if concept_id not in concepts
         )
+        if errors:
+            self.argument_parser.error(f"{NAME} cannot read concepts:\n" + "\n".join(sorted(set(errors))) + "\n")
+
+    def _check_roots(self, labeled: list[tuple[Path, LabelJSON]]) -> None:
+        """Check that label roots refer to existing labels in the same language."""
+        spellings = set(Label.homograph_mapping)
+        errors: list[str] = []
+        for file_path, label in labeled:
+            language = label["language"]
+            root_or_roots = label.get("roots", [])
+            roots = [root_or_roots] if isinstance(root_or_roots, str) else root_or_roots
+            concept = label["concept"]
+            concept_id = ", ".join(concept) if isinstance(concept, list) else concept
+            errors.extend(
+                f"file {file_path}: root '{root}' of concept '{concept_id}' ({language}) is not a defined label"
+                for root in roots
+                if (language, root) not in spellings
+            )
         if errors:
             self.argument_parser.error(f"{NAME} cannot read concepts:\n" + "\n".join(sorted(set(errors))) + "\n")
 
