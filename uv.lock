@@ -1,19 +1,15 @@
 version = 1
 revision = 3
-requires-python = ">=3.13, <=3.14"
+requires-python = ">=3.13"
 resolution-markers = [
-    "python_full_version >= '3.14'",
+    "python_full_version >= '3.15'",
+    "python_full_version == '3.14.*'",
     "python_full_version < '3.14'",
 ]
 
-[[package]]
-name = "annotated-doc"
-version = "0.0.4"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/57/ba/046ceea27344560984e26a590f90bc7f4a75b06701f653222458922b558c/annotated_doc-0.0.4.tar.gz", hash = "sha256:fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4", size = 7288, upload-time = "2025-11-10T22:07:42.062Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/d3/26bf1008eb3d2daa8ef4cacc7f3bfdc11818d111f7e2d0201bc6e3b49d45/annotated_doc-0.0.4-py3-none-any.whl", hash = "sha256:571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320", size = 5303, upload-time = "2025-11-10T22:07:40.673Z" },
-]
+[options]
+exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for backwards compatibility when using relative exclude-newer values.
+exclude-newer-span = "P7D"
 
 [[package]]
 name = "ast-serialize"
@@ -632,6 +628,12 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/78/8a/24f26269d7f88e1db904e9471ee97bd0ab8ffdc04cfa23727d4af9dd2d4f/pyproject_fmt-2.25.1-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:d4d0aec4f1a1e1b4f4438cda6a30b84e16ab915239bda7041a6f160713ab46bf", size = 5645545, upload-time = "2026-06-25T16:01:54.873Z" },
     { url = "https://files.pythonhosted.org/packages/01/a3/9fc0d64f401fb6317c68ef0949ad0afd3db3c1085e452e3deee18770fead/pyproject_fmt-2.25.1-cp314-cp314t-win_amd64.whl", hash = "sha256:bd2c731c94d85867d27983cf670b3e0ab36ac1b2fbb5d92fcbf43540ff75ce13", size = 5319962, upload-time = "2026-06-25T16:01:56.774Z" },
     { url = "https://files.pythonhosted.org/packages/7d/cb/1defeb509a684dd3ccc459821764757591e63051b812efaf59d2e5860f85/pyproject_fmt-2.25.1-cp314-cp314t-win_arm64.whl", hash = "sha256:9fe7b320321aa47540c0cfff9b622bc54b6493e67ce16ad9b6160088a95799a5", size = 4848007, upload-time = "2026-06-25T16:01:58.889Z" },
+    { url = "https://files.pythonhosted.org/packages/91/dd/81c4c988ca540c90cf1a1729926b9362ee772039be62d8b4d48c374e9ad7/pyproject_fmt-2.25.1-cp315-cp315t-macosx_10_12_x86_64.whl", hash = "sha256:9aa33cb3de02b4758f8b079eab03106d7f36980c6917e7880b97115d4d5df3f7", size = 5161561, upload-time = "2026-06-25T16:02:01.09Z" },
+    { url = "https://files.pythonhosted.org/packages/97/2c/a23b09f18db16e6a36033a7c31230c2423ed3177e9d7bd4042a41de47fa2/pyproject_fmt-2.25.1-cp315-cp315t-macosx_11_0_arm64.whl", hash = "sha256:4abbb263f9f29c70026f064c0a1133d2439f0cc18d73ee6d2b36793fb150ef60", size = 4922490, upload-time = "2026-06-25T16:02:03.243Z" },
+    { url = "https://files.pythonhosted.org/packages/9b/bd/ce5e011a3883fcde61e14341d7534f2250bce04713d3b12b7c6ba3817d48/pyproject_fmt-2.25.1-cp315-cp315t-manylinux_2_28_aarch64.whl", hash = "sha256:ce81ec7fef5bd7ef4fccf5b679008b92118d54fdd6c4d607de9f30a16896368e", size = 5082287, upload-time = "2026-06-25T16:02:05.395Z" },
+    { url = "https://files.pythonhosted.org/packages/43/85/04556f029896ef804d8ac6c17d198003e11e08db1bf43822006eaf281aa7/pyproject_fmt-2.25.1-cp315-cp315t-manylinux_2_28_x86_64.whl", hash = "sha256:295f127219ea8ee4c9cf28c586a2adcbd0b9e9df3f2c9a3d391dca51f3b7d640", size = 5474861, upload-time = "2026-06-25T16:02:07.647Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/64/a3af8d289907d36cfc08a76e727ff39f0fb92d11902340d6a9250577cd40/pyproject_fmt-2.25.1-cp315-cp315t-musllinux_1_2_aarch64.whl", hash = "sha256:7883414444b67a36b916091de5575067f2b83c85ecd09fd030ed5354ec8159e1", size = 5083034, upload-time = "2026-06-25T16:02:09.912Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/80/ba4f3c3be7106dc9ac8f8c8ac3c460d9c285592c5a6dfcfd75a3446e2122/pyproject_fmt-2.25.1-cp315-cp315t-musllinux_1_2_x86_64.whl", hash = "sha256:b99217d863e1c7e9253cea27ab1c9b28b46d44553f3e8d36b482ef4e8712de5d", size = 5646115, upload-time = "2026-06-25T16:02:12.214Z" },
 ]
 
 [[package]]
@@ -857,15 +859,6 @@ wheels = [
 ]
 
 [[package]]
-name = "shellingham"
-version = "1.5.4"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/58/15/8b3609fd3830ef7b27b655beb4b4e9c62313a4e8da8c676e142cc210d58e/shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de", size = 10310, upload-time = "2023-10-24T04:13:40.426Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686", size = 9755, upload-time = "2023-10-24T04:13:38.866Z" },
-]
-
-[[package]]
 name = "stevedore"
 version = "5.8.0"
 source = { registry = "https://pypi.org/simple" }
@@ -915,7 +908,6 @@ dev = [
     { name = "pyproject-fmt" },
     { name = "ruff" },
     { name = "rust-just" },
-    { name = "troml" },
     { name = "ty" },
     { name = "types-requests" },
     { name = "unittest-xml-reporting" },
@@ -939,22 +931,12 @@ requires-dist = [
     { name = "rich-argparse", specifier = "==1.8.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = "==0.15.20" },
     { name = "rust-just", marker = "extra == 'dev'", specifier = "==1.54.0" },
-    { name = "troml", marker = "extra == 'dev'", specifier = "==0.4.1" },
     { name = "ty", marker = "extra == 'dev'", specifier = "==0.0.55" },
     { name = "types-requests", marker = "extra == 'dev'", specifier = "==2.33.0.20260518" },
     { name = "unittest-xml-reporting", marker = "extra == 'dev'", specifier = "==4.0.0" },
     { name = "vulture", marker = "extra == 'dev'", specifier = "==2.16" },
 ]
 provides-extras = ["dev"]
-
-[[package]]
-name = "tomlkit"
-version = "0.15.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/51/db/03eaf4331631ef6b27d6e3c9b68c54dc6f0d63d87201fed600cc409307fd/tomlkit-0.15.0.tar.gz", hash = "sha256:7d1a9ecba3086638211b13814ea79c90dd54dd11993564376f3aa92271f5c7a3", size = 161875, upload-time = "2026-05-10T07:38:22.245Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6a/43/8bd850ee71a191bf072e31302c73a66be413fecdd98fdcd111ecbcce13ca/tomlkit-0.15.0-py3-none-any.whl", hash = "sha256:4dbc8f0fc024412b57ced8757ac7461305126a648ff8c2c807fcb8e133a78738", size = 41328, upload-time = "2026-05-10T07:38:23.517Z" },
-]
 
 [[package]]
 name = "trailrunner"
@@ -966,30 +948,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4d/93/630e10bacd897daeb9ff5a408f4e7cb0fc2f243e7e3ef00f9e6cf319b11c/trailrunner-1.4.0.tar.gz", hash = "sha256:3fe61e259e6b2e5192f321c265985b7a0dc18497ced62b2da244f08104978398", size = 15836, upload-time = "2023-03-27T07:54:35.515Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b1/29/21001afea86bac5016c3940b43de3ce4786b0d8337d4ea79bb903c649ce3/trailrunner-1.4.0-py3-none-any.whl", hash = "sha256:a286d39f2723f28d167347f41cf8f232832648709366e722f55cf5545772a48e", size = 11071, upload-time = "2023-03-27T07:54:32.514Z" },
-]
-
-[[package]]
-name = "troml"
-version = "0.4.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "packaging" },
-    { name = "tomlkit" },
-    { name = "trove-classifiers" },
-    { name = "typer" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/89/e3/81d7e78cd1508435f02baea95325342f8e997ee25bfa9104c3d49e64e5ae/troml-0.4.1.tar.gz", hash = "sha256:d71b6ea5dcc503bb31937b05f7a7752076d00052c2a0c963f33a2325d0dc0c4b", size = 12620, upload-time = "2025-09-14T19:05:57.709Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/84/30/92d5e111c77a89df4267b359a1463e703d47b4e10dc7f33a4b49a2e3252b/troml-0.4.1-py3-none-any.whl", hash = "sha256:cac2bd3663f03af716c221e795500a9ca85eca6b4e27b816db10c89d04f35905", size = 13625, upload-time = "2025-09-14T19:05:56.388Z" },
-]
-
-[[package]]
-name = "trove-classifiers"
-version = "2026.6.1.19"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c2/e3/7ca82ee24c82d344584abd5b8637b3bd056f2900226e8d82fc22f1184b92/trove_classifiers-2026.6.1.19.tar.gz", hash = "sha256:c5132b4b61a829d11cfbd2d72e97f20a45ed6edb95e45c5efdeb5e00836b2745", size = 17059, upload-time = "2026-06-01T19:41:34.649Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/7c/a4/81502f486f01db95bc8320646a8a12511f5e556cb63d5e224d91816605c4/trove_classifiers-2026.6.1.19-py3-none-any.whl", hash = "sha256:ab4c4ec93cc4a4e7815fa759906e05e6bb3f2fbd92ea0f897288c6a43efd15b3", size = 14211, upload-time = "2026-06-01T19:41:33.434Z" },
 ]
 
 [[package]]
@@ -1015,21 +973,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/7d/90/a912531e51ee7e076b42972479290fa687c0f5e747b7e773f3033164acaa/ty-0.0.55-py3-none-win32.whl", hash = "sha256:52b968e24eb4f7a5c3bd251db1f99f60dd385890356d38fc619d84f1b423446a", size = 11117501, upload-time = "2026-06-27T00:27:22.714Z" },
     { url = "https://files.pythonhosted.org/packages/4c/7a/99d59843bf8908a7f9f4d13fda107dbad07b7faa28ecd7860eacf363fb1c/ty-0.0.55-py3-none-win_amd64.whl", hash = "sha256:bf39cbfdc0add44d94bd3fff1f53c351418d134b6a66b87efdb7876d7b7a2224", size = 12150106, upload-time = "2026-06-27T00:27:24.881Z" },
     { url = "https://files.pythonhosted.org/packages/b3/44/20987505cedf2a865b08482f0eabc181fd9599b062964057ec8a128a4296/ty-0.0.55-py3-none-win_arm64.whl", hash = "sha256:f7f3700a9a060e8f1af11e4fb63fafcaf272b041781f4ccdfda2b3b5c6c1e439", size = 11560157, upload-time = "2026-06-27T00:27:27.332Z" },
-]
-
-[[package]]
-name = "typer"
-version = "0.26.8"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "annotated-doc" },
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "rich" },
-    { name = "shellingham" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/7c/f7/68adc395201b20b872d68e975386832e8005ffeacedd43a1d837a32815be/typer-0.26.8.tar.gz", hash = "sha256:c244a6bd558886fe3f8780efb6bdd28bb9aff005a94eedebaa5cb32926fe2f7e", size = 202097, upload-time = "2026-06-26T09:22:45.705Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/80/87/b9fd69c92c6102a066e1b86a35243f53e70bd4c709f2a26d9f4fee4f4dc0/typer-0.26.8-py3-none-any.whl", hash = "sha256:3512ca79ac5c11113414b36e80281b872884477722440691c89d1112e321a49c", size = 122564, upload-time = "2026-06-26T09:22:44.72Z" },
 ]
 
 [[package]]

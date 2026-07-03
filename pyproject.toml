@@ -11,7 +11,7 @@ keywords = [ "dutch", "english", "finnish", "language learning" ]
 license = "Apache-2.0"
 license-files = [ "LICENSE" ]
 authors = [ { name = "Frank Niessink", email = "frank@niessink.com" } ]
-requires-python = ">=3.13,<=3.14"
+requires-python = ">=3.13"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: End Users/Desktop",
@@ -43,7 +43,6 @@ optional-dependencies.dev = [
     "pyproject-fmt==2.25.1",
     "ruff==0.15.20",
     "rust-just==1.54.0",
-    "troml==0.4.1",
     "ty==0.0.55",
     "types-requests==2.33.0.20260518",
     "unittest-xml-reporting==4.0.0",
@@ -58,6 +57,9 @@ scripts.toisto = "toisto.app:main"
 packages.find.where = [ "src" ]
 package-data."*" = [ "*.json" ]
 package-data.languages = [ "*.txt" ]
+
+[tool.uv]
+exclude-newer = "7 days"
 
 [tool.ruff]
 target-version = "py313"
@@ -98,6 +100,7 @@ ignore_names = [ "_SubParsersAction", "optionxform" ]
 [tool.pyproject-fmt]
 indent = 4
 keep_full_version = true  # Don't remove trailing zero's from version specifiers
+max-supported-python = 3.16
 
 [tool.mypy]
 python_version = "3.13"
