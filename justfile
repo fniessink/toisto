@@ -24,10 +24,6 @@ ruff *fix: uv-sync
 fixit *fix: uv-sync
     uv run fixit {{ if fix == "fix" { "fix" } else { "lint" } }} {{ code_folders }}
 
-# Check the classifiers in pyproject.toml. Pass 'fix' to also fix issues.
-troml *fix: uv-sync
-    uv run troml {{ if fix == "fix" { "suggest --fix" } else { "check" } }}
-
 # Check the format of pyproject.toml. Pass 'fix' to also fix issues.
 pyproject-fmt *fix: uv-sync
     uv run pyproject-fmt {{ if fix == "fix" { "" } else { "--check " } }}pyproject.toml
@@ -41,7 +37,7 @@ validate-markdown-json:
     uv run --no-project --script tools/validate_markdown_json.py
 
 # Run the linters. Pass 'fix' to also fix issues.
-lint *fix: (ruff fix) (fixit fix) (troml fix) (pyproject-fmt fix) (format-json fix) validate-markdown-json
+lint *fix: (ruff fix) (fixit fix) (pyproject-fmt fix) (format-json fix) validate-markdown-json
 
 # Check the code for typing issues
 ty: uv-sync
