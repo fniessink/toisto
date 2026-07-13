@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = [ "setuptools<81" ]
+requires = [ "setuptools<84" ]
 
 [project]
 name = "toisto"
