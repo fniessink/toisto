@@ -42,7 +42,7 @@ optional-dependencies.dev = [
     "mypy==2.1.0",
     "pyproject-fmt==2.25.1",
     "ruff==0.15.20",
-    "rust-just==1.54.0",
+    "rust-just==1.55.1",
     "ty==0.0.55",
     "types-requests==2.33.0.20260518",
     "unittest-xml-reporting==4.0.0",
